@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+.backFantasy{
+    height: 100%;
+    margin: 0;
+    font-family: "Arial";
+    color: #fff;
+    background-image: url("/assets/back.jpg");
+    background-size:     cover;
+    background-repeat:   repeat-y;
+    background-position: center center;
+}
+
+#wrapper {
+    min-height: 100%; 
+    margin-top: 0;
+}
+
+body{
+    background-color: #DDD;
+}
+.circle {
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: small;
+    color: #fff;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    margin-left: 25px;
+    background-color: rgba(0, 0, 0, 0.8);
+    float: left;
+}
+.circle:hover {
+    background-color: #F00;
+    background-color: rgba(222, 218, 7, 0.4);
+}
+
+.title{
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.4);
+    min-height: 151px;
+}
+
+.circleBet {
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: small;
+    color: #fff;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    margin: 0;
+    margin-left: 0;
+    background-color: rgba(50, 50, 50, 0.8);
+    float: left;
+}
+
+.unselected{
+    cursor: pointer;
+}
+
+.unselectedRd{
+    cursor: pointer;
+}

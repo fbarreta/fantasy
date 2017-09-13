@@ -1,0 +1,16 @@
+<div class="circle">
+  <div class="cont">
+      <div style="width:100%;text-align:center;font-size: medium;"><br/>{{ bout.rounds }} Rounds Bout<br/><br/></div>
+      <div style="width:100%;text-align:center;">
+          <img src="/assets/fotos/{{ bout.fighter1.photo }}" width="80" height="52" />
+          X
+          <img src="/assets/fotos/{{ bout.fighter2.photo }}" width="80" height="52"/>
+      </div>
+      <div style="width:50%;text-align:center;float:left">
+          {{ bout.fighter1.name }}
+      </div>
+      <div style="width:50%;text-align:center;float:right">
+        {{ bout.fighter2.name }}
+      </div>
+  </div>
+</div>
