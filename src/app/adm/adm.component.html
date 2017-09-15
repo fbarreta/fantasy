@@ -1,0 +1,52 @@
+<div class="container">
+  
+      <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+  
+              <h2>Event Bouts</h2>
+
+              <div class="form-group">
+                <label for="fighter1select">Fighter 1: </label>
+                <select class="form-control" id="fighter1select" [(ngModel)]="newBout.fighter1">
+                  <option *ngFor="let f of fighters" [ngValue]="f">{{ f.name }}</option>
+                </select>
+                <label for="fighter2select">Fighter 2: </label>
+                <select class="form-control" id="fighter2select" [(ngModel)]="newBout.fighter2">
+                  <option *ngFor="let f of fighters" [ngValue]="f">{{ f.name }}</option>
+                </select>
+                <label for="roundsselect">Rounds: </label>
+                <select class="form-control" id="roundsselect" [(ngModel)]="newBout.rounds">
+                  <option>3</option>
+                  <option>5</option>
+                </select>
+                <button class="btn btn-success" (click)="addBout();">Add Bout</button>
+              </div>
+              <a class="btn btn-warning" routerLink="/">Done</a>
+              <table class="table table-striped table-hover">
+  
+                  <thead>
+                      <tr>
+                          <th>Fighter 1</th>
+                          <th> </th>
+                          <th>Fighter 2</th>
+                          <th>Rounds</th>
+                          <th></th>
+                      </tr>
+                  </thead>
+  
+                  <tbody>
+                      <tr *ngFor="let b of bouts">
+                          <td>{{ b.fighter1.name }}</td>
+                          <td>X</td>
+                          <td>{{ b.fighter2.name }}</td>
+                          <td>{{ b.rounds }}</td>
+                          <td><button class="btn btn-danger" (click)="deleteBout(b);">Delete</button></td>
+                      </tr>
+                  </tbody>
+  
+              </table>
+  
+          </div>
+      </div>
+  
+  </div>

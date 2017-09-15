@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Bout } from '../model/bout'
+import { Bout } from '../model/bout';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-fight',
@@ -9,7 +10,7 @@ import { Bout } from '../model/bout'
 })
 export class FightComponent implements OnInit {
   @Input() bout: Bout;
+
   ngOnInit() {
   }
-
 }

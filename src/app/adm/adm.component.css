@@ -1,0 +1,11 @@
+.table-striped>tbody>tr:nth-child(odd)>td {
+   background-color: rgba(11, 11, 12, 0.64);
+ }
+
+ .table-striped>tbody>tr:nth-child(even)>td {
+    background-color: rgba(33, 33, 35, 0.35);
+  }
+
+  .table-hover {
+    background-color: rgba(47, 47, 45, 0.56);
+  }
