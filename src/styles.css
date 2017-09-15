@@ -1,3 +1,11 @@
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #000;
+}
+
 .backFantasy{
     height: 100%;
     margin: 0;
@@ -9,14 +17,6 @@
     background-position: center center;
 }
 
-#wrapper {
-    min-height: 100%; 
-    margin-top: 0;
-}
-
-body{
-    background-color: #DDD;
-}
 .circle {
     font-family: "Arial";
     font-weight: bold;
@@ -50,8 +50,8 @@ body{
     border-radius: 50%;
     width: 400px;
     height: 400px;
-    margin: 0;
-    margin-left: 0;
+    margin-top: 50px;
+    margin-left: 250px;
     background-color: rgba(50, 50, 50, 0.8);
     float: left;
 }

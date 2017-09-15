@@ -1,6 +1,12 @@
+import { Component, Input } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BetComponent } from './bet.component';
+import { FightComponent } from '../fight/fight.component';
+import { Bout } from '../model/bout';
+import { BoutService } from '../service/bout.service';
 
 describe('BetComponent', () => {
   let component: BetComponent;
@@ -8,7 +14,9 @@ describe('BetComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BetComponent ]
+      declarations: [ BetComponent, MockFightComponent ],
+      providers: [BoutService],
+      imports: [HttpModule]
     })
     .compileComponents();
   }));
@@ -23,3 +31,11 @@ describe('BetComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+@Component({
+  selector: 'app-fight',
+  template: ''
+})
+class MockFightComponent {
+  @Input() bout: Bout;
+}

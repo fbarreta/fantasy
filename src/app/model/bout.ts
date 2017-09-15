@@ -1,4 +1,5 @@
 import { Fighter } from './fighter';
+import { Shot } from './shot';
 
 export class Bout {
     constructor(

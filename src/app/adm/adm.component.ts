@@ -22,7 +22,7 @@ export class AdmComponent implements OnInit {
 
   ngOnInit() {
     // Fill bouts
-    this.getBouts();
+    this.bouts = this.getBouts();
     // Fill fighters combo
     this.fighterService.getFighters()
     .then((fighters: Fighter[]) => {
@@ -30,24 +30,25 @@ export class AdmComponent implements OnInit {
     }).catch(err => console.log(err));
   }
 
-  getBouts() {
+  getBouts(): Bout[] {
     this.boutService.getBouts()
     .then((bouts: Bout[]) => {
-      this.bouts = bouts;
+      return bouts;
     }).catch(err => console.log(err));
+    return null;
   }
 
   addBout() {
     this.newBout.id = this.bouts.length + 1;
     this.boutService.create(this.newBout)
     .then(() => console.log('Bout Added.')).catch(err => console.log(err));
-    this.getBouts();
+    this.bouts = this.getBouts();
   }
 
   deleteBout(bout: Bout) {
     this.boutService.delete(bout)
     .then(() => console.log('Bout Deleted.')).catch(err => console.log(err));
-    this.getBouts();
+    this.bouts = this.getBouts();
   }
 
 }

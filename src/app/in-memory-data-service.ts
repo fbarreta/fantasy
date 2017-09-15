@@ -2,6 +2,7 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Fighter } from './model/fighter';
 import { Bout } from './model/bout';
 import { Event } from './model/event';
+import { Shot } from './model/shot';
 
 export class InMemoryDataService implements InMemoryDbService {
 
@@ -27,6 +28,8 @@ export class InMemoryDataService implements InMemoryDbService {
             }
         ];
 
-        return {bouts, fighters};
+        const shots: Shot[] = [];
+
+        return {bouts, fighters, shots};
     }
 }

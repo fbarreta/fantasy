@@ -1,13 +1,36 @@
 <app-modal #modal>
-    <div class="app-modal-header">
-        header
-    </div>
     <div class="app-modal-body">
-        Whatever content you like, form fields, anything
-    </div>
-    <div class="app-modal-footer">
-        <button type="button" class="btn btn-default" (click)="modal.hide()">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+            <div class="transparentDiv"> 
+                    <div class="circleBet" id="xx">
+                            <div style="width:100%;text-align:center;">
+                                <div style="width:100%;text-align:center;font-size: x-large;">
+                                    <br/>Bout<br/><br/></div>
+                                <div style="width:100%;text-align:center;margin-top: 20px;">
+                                    <div style="float: left;" onclick="javascript:selectF('lut1');">
+                                        <img id="foto1" src="/assets/fotos/{{ bout.fighter1.photo }}" width="160" height="104" />
+                                    </div>
+                                    <span style="line-height: 100px;font-family: Arial;font-weight: bold;font-size: x-large;color: #fff;">X</span>
+                                    <div style="float: right;" onclick="javascript:selectF('lut2');">
+                                        <img id="foto2" src="/assets/fotos/{{ bout.fighter2.photo }}" width="160" height="104"/>
+                                    </div>
+                                </div>
+                                <div style="width:40%;text-align:center;float:left;font-size: larger;" id="lut1" class="unselectedF">
+                                    <span id="nome1">{{ bout.fighter1.name }}</span>
+                                </div>
+                                <div style="width:40%;text-align:center;float:right;font-size: larger;" id="lut2" class="unselectedF">
+                                    <span id="nome2">{{ bout.fighter2.name }}</span>
+                                </div>
+                                <div style="clear: both;margin-bottom: 20px;"></div>
+                                <div style="width:100%;text-align:center;font-size: larger;">
+                                    KO SUB DEC
+                                </div>
+                                <div style="clear: both;margin-bottom: 20px;"></div>
+                                <div style="width:100%;text-align:center;font-size: larger;" id="rounds">
+                                    1 2 3 4 5
+                                </div>
+                            </div>
+                        </div>
+                </div>
     </div>
 </app-modal>
 <div class="circle" (click)="modal.show();">
